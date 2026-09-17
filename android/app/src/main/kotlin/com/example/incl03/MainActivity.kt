@@ -1,4 +1,4 @@
-package com.example.inclass_act03
+package com.example.incl03
 
 import io.flutter.embedding.android.FlutterActivity
 

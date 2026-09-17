@@ -4,7 +4,7 @@ import 'dart:ui' as ui;
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:inclass_act03/main.dart';
+import 'package:incl03/main.dart';
 
 import 'experiments/shared_state.dart' as shared;
 import 'experiments/reversed_shadows.dart' as reversed;

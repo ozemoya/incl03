@@ -40,4 +40,4 @@ The two submission screenshots were captured from the app running on the Pixel 7
 The emulator screenshot test passed. `flutter analyze` reported no issues, and all three widget tests passed.
 
 ## GitHub Repository
-https://github.com/ozemoya/inclass_act03
+https://github.com/ozemoya/incl03
