@@ -1,43 +1,53 @@
-# 📷 Mylestography Control Studio (Flutter)
+# Mylestography Control Studio (Flutter)
 
-A photography-inspired 3D neomorphic control deck built with Flutter and Dart. It demonstrates touch feedback and local state through simulated camera controls; it does not operate a physical camera.
+An interactive 3D neomorphic control deck built with Flutter and Dart, demonstrating tactile feedback, state management, and adaptive themes through simulated photography controls.
 
-## ✨ Features
-- **Photography Controls**: Shutter, Focus, Burst, and Flash each have a distinct icon, accent color, and status message. Dual opposing BoxShadows and GestureDetector make them depress on touch.
-- **Live State Management**: A tap counter, power slider, and status monitor update through setState.
-- **Power Feedback**: The background changes to a warm warning color above 80% power and returns to normal at 80% or below.
-- **Adaptive Theme System**: Switch between light and dark modes from the app bar.
-- **Modular Component Design**: Every control reuses TactileButton and keeps its pressed state local.
-- **Fifth Control**: Hold Recharge to restore power to 100%; a short tap displays a hold instruction.
+## Features
 
-## 🛠️ Tech Stack
+- **3D Tactile Buttons**: Dual opposing `BoxShadow` effects and `GestureDetector` callbacks create responsive press and release feedback.
+- **Live State Management**: A tap counter, power slider, and status monitor update as users interact with the controls.
+- **Adaptive Themes**: Switch between light and dark themes from the app bar.
+- **Reusable Components**: The custom `TactileButton` widget manages each control's pressed state independently.
+- **Photography Controls**: Shutter, Focus, Burst, and Flash have distinct icons, accent colors, and status messages.
+- **Power Feedback and Recharge**: Power above 80% activates a warning background. Holding Recharge restores power to 100%.
+
+## Tech Stack
+
 - **Framework**: Flutter (Material 3)
 - **Language**: Dart
-- **Key Widgets**: StatefulWidget, GestureDetector, AnimatedContainer, Slider, Wrap
+- **Key Widgets**: `StatefulWidget`, `GestureDetector`, `AnimatedContainer`, `Slider`, `Wrap`
 
 ## Design Decisions
-I chose a photography console to connect the activity to Mylestography. Shutter uses an amber camera icon, Focus uses teal focus brackets, Burst uses a purple burst icon, and Flash uses a blue lightning bolt. Each control has a readable label so color is not the only cue. The controls simulate actions through the dashboard rather than claiming to operate a real camera. Above 80%, the warm background and HIGH POWER message make the threshold visible in both themes. Recharge uses a long press to separate it from an ordinary command; restoring 100% intentionally activates the high-power warning. Local pressed state keeps touching one control from depressing the other controls.
 
-## Run and Verify
-```
+The photography theme connects the control deck to Mylestography. Each button combines a distinct color with an icon and readable label. The controls simulate camera actions through the dashboard. Local pressed state ensures that touching one button does not affect the appearance of the others. A long press distinguishes Recharge from ordinary commands, while the warning background and status message make high power visible in both themes.
+
+## Getting Started
+
+```sh
 flutter pub get
 flutter run
+```
+
+## Validation
+
+```sh
 flutter analyze
 flutter test
 ```
-The tests cover local and shared pressed state, gesture cancellation, the 80/81 threshold, and long-press recharge. Temporary variants in test/experiments reproduce the required shared-state and reversed-shadow experiments without changing the final app. Exact test output is in submission/test-evidence.txt.
 
-## Assignment Source
-Adapted from the instructor's heavily commented starter code:
-https://codd.cs.gsu.edu/~lhenry23/Web/inc/inc03/v2/index.html
+The project passed static analysis and all three widget tests. Tests cover pressed state, gesture cancellation, the power threshold, and long-press recharge. Temporary test variants also demonstrate shared-state behavior and reversed shadow directions.
 
 ## Screenshots
-The two submission screenshots were captured from the app running on the Pixel 7 Pro Android emulator. The second captures Shutter while held down, before the command is released.
 
-![Unpressed controls](submission/screenshots/01-unpressed.png)
-![Shutter during a press](submission/screenshots/02-mid-press.png)
+Captured from the app running on a Pixel 7 Pro Android emulator. The second image shows Shutter held down before release.
 
-The emulator screenshot test passed. `flutter analyze` reported no issues, and all three widget tests passed.
+![Unpressed controls](https://raw.githubusercontent.com/ozemoya/incl03/main/submission/screenshots/01-unpressed.png)
+![Shutter during a press](https://raw.githubusercontent.com/ozemoya/incl03/main/submission/screenshots/02-mid-press.png)
+
+## Assignment Source
+
+Adapted from the instructor's [In-Class Activity 03 starter code](https://codd.cs.gsu.edu/~lhenry23/Web/inc/inc03/v2/index.html).
 
 ## GitHub Repository
-https://github.com/ozemoya/incl03
+
+[ozemoya/incl03](https://github.com/ozemoya/incl03)
