@@ -1,0 +1,17 @@
+00:00 +0: loading C:/Users/ozemo/Documents/ic03/inclass_act03/test/widget_test.dart
+00:00 +0: Local presses, callback order, cancellation, threshold and recharge
+SHUTTER: onTapDown
+SHUTTER: onTapUp
+FOCUS: onTapDown
+FOCUS: onTapCancel
+RECHARGE: onTapDown
+RECHARGE: onTapCancel
+00:00 +1: Q1 shared state experiment
+SHUTTER: onTapDown
+SHUTTER: onTapUp
+FOCUS: onTapDown
+Q1: holding FOCUS also shrank untouched SHUTTER to 40; shared-state bug reproduced.
+FOCUS: onTapUp
+00:00 +2: Q3 reverse light direction experiment
+Q3: dark offset (-8,8), light offset (8,-8); production source unchanged.
+00:00 +3: All tests passed!
